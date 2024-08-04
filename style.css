@@ -1,68 +1,112 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-.wrapper{
+.wrapper {
     height: 100vh;
-    overflow-x:hidden;
+    overflow-x: hidden;
     overflow-y: auto;
     background-color: darkslategray;
 }
-.container{
-    height:100%;
+.container {
+    height: 100%;
     max-width: 1000px;
-    margin :0 auto;
+    margin: 0 auto;
 }
-h1{
-    margin:20px;
+h1 {
+    margin: 20px;
     text-align: center;
     margin-bottom: 20px;
     font-size: 3rem;
+    color: white;
 }
-.gallery{
-    display :flex;
-    flex-wrap:wrap;
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
 }
-.card{
-    width:32%;
+.card {
+    width: 32%;
     position: relative;
     margin-bottom: 20px;
     border-radius: 10px;
     overflow: hidden;
 }
-.card img{
-    width:100%;
+.card img {
+    width: 100%;
     filter: grayscale(100%);
     box-shadow: 0 0 20px #333;
-    height :100%
+    height: 100%;
+    transition: transform 0.5s, filter 0.5s;
 }
-.card :hover{
-    transform:scale(1.05);
-    filter:drop-shadow(0 0 10px #333);
-    transition: 0.5s;
-    animation-name:right;
-}
-.card :hover img {
+.card:hover img {
+    transform: scale(1.05);
     filter: grayscale(0%);
 }
-.card figcaption{
+.card figcaption {
     position: absolute;
-    bottom:0;
-    left:0;
-    padding:25px;
-    width : 100%;
+    bottom: 0;
+    left: 0;
+    padding: 25px;
+    width: 100%;
     height: 20%;
     font-size: 16px;
-    font-weight:500;
-    color:#cbbafd;
-    opacity :0;
+    font-weight: 500;
+    color: #cbbafd;
+    opacity: 0;
     border-radius: 0 0 10px 10px;
-    transition:0.35;
-   
+    transition: opacity 0.35s;
 }
-.card:hover figcaption{
-    opacity :1;
-    transform: scale(1.05);
+.card:hover figcaption {
+    opacity: 1;
+}
+/* modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 60px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background-color: rgba(0, 0, 0, 0.9);
+}
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+}
+.close {
+    position: absolute;
+    top: 50px;
+    right: 75px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+/* arrows */
+.arrows {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+}
+.arrows i {
+    font-size: 2rem;
+    color: #fff;
+    cursor: pointer;
+    padding: 0 20px;
 }

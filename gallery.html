@@ -10,46 +10,59 @@
 <body>
     <div class="wrapper"> 
         <div class="container">
-        <h1>The Gallery</h1>
-        <div class="gallery">
-            <figure class="card">
-            <img src="image1.jpg" alt="1st image">
-            <figcaption>image 1</figcaption>
-        </figure>
-        <figure class="card">
-            <img src="image2.jpeg" alt="2nd image">
-            <figcaption>image 2</figcaption>
-        </figure>   
-        <figure class="card">
-            <img src="image3.jpeg" alt="3rd image">
-            <figcaption>image 3</figcaption>
-        </figure>   
-        <figure class="card">
-            <img src="image4.jpeg" alt="4th image">
-            <figcaption>image 4</figcaption>
-        </figure>   
-        <figure class="card">
-            <img src="image5.jpeg" alt="5th image">
-            <figcaption>image 5</figcaption>
-        </figure>   
-        <figure class="card">
-            <img src="image6.jpeg" alt="6th image">
-            <figcaption>image 6</figcaption>
-        </figure>   
-        <figure class="card">
-            <img src="image7.jpeg" alt="7th image">
-            <figcaption>image 7</figcaption>
-        </figure>
-        <figure class="card">
-            <img src="image8.jpeg" alt="8th image">
-            <figcaption>image 8</figcaption>
-        </figure>
-        <figure class="card">
-            <img src="image9.jpeg" alt="9th image">
-            <figcaption>image 8</figcaption>
-        </figure>
-        </div>
-        </div>   
+            <h1>The Gallery</h1>
+            <div class="gallery">
+                <figure class="card">
+                    <img src="image1.jpg" alt="1st image" id="1" data-index="0">
+                    <figcaption>image 1</figcaption>
+                </figure>
+                <figure class="card">
+                    <img src="image2.jpeg" alt="2nd image" id="2" data-index="1">
+                    <figcaption>image 2</figcaption>
+                </figure>   
+                <figure class="card">
+                    <img src="image3.jpeg" alt="3rd image" id="3" data-index="2">
+                    <figcaption>image 3</figcaption>
+                </figure>   
+                <figure class="card">
+                    <img src="image4.jpeg" alt="4th image" id="4" data-index="3">
+                    <figcaption>image 4</figcaption>
+                </figure>   
+                <figure class="card">
+                    <img src="image5.jpeg" alt="5th image" id="5" data-index="4">
+                    <figcaption>image 5</figcaption>
+                </figure>   
+                <figure class="card">
+                    <img src="image6.jpeg" alt="6th image" id="6" data-index="5">
+                    <figcaption>image 6</figcaption>
+                </figure>   
+                <figure class="card">
+                    <img src="image7.jpeg" alt="7th image" id="7" data-index="6">
+                    <figcaption>image 7</figcaption>
+                </figure>
+                <figure class="card">
+                    <img src="image8.jpeg" alt="8th image" id="8" data-index="7">
+                    <figcaption>image 8</figcaption>
+                </figure>
+                <figure class="card">
+                    <img src="image9.jpeg" alt="9th image" id="9" data-index="8">
+                    <figcaption>image 9</figcaption>
+                </figure>
+            </div>
+        </div>  
     </div>
+
+    <!-- modal -->
+    <div id="modal" class="modal">
+        <span id="close" class="close">&times;</span>
+        <img id="modal-img" class="modal-content">
+        <div class="arrows">      
+            <i class="fa-solid fa-arrow-left" id="arrow-left"></i>
+            <i class="fa-solid fa-arrow-right" id="arrow-right"></i>
+        </div> 
+    </div>
+   
+    <script src="https://kit.fontawesome.com/cdf0f5b435.js" crossorigin="anonymous"></script>
+    <script src="function.js"></script>
 </body>
 </html>
